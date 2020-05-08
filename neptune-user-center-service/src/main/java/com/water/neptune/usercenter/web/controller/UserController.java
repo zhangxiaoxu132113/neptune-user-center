@@ -1,5 +1,6 @@
 package com.water.neptune.usercenter.web.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.water.neptune.usercenter.model.vo.UserAccountVO;
 import com.water.neptune.usercenter.service.BizUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Author: zhangmiaojie
  * @Date: 2020/4/29 17:35
  */
-@RequestMapping(value = "/auth/user")
+@RequestMapping(value = "/user")
 @RestController
 public class UserController extends BaseController {
 
