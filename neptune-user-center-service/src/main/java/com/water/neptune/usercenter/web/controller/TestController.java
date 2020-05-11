@@ -10,4 +10,10 @@ public class TestController {
     public String hello() {
         return "hello sentinel";
     }
+
+    @GetMapping("/degrade")
+    public String degrade() {
+        int i = 0 /0 ;
+        return "degrade sentinel";
+    }
 }

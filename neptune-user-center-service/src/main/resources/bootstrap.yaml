@@ -34,15 +34,25 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8068
-      datasource:
-        ds1:
-          nacos:
-            server-addr: localhost:8848
-            namespace: 9b702cea-ca45-416a-b545-e4ac3ddc09bc
-            group-id: SENTINEL_GROUP
-            data-id: ${spring.application.name}-sentinel
-            data-type: json
-            rule-type: flow
+#      datasource:
+#        flow-rule:
+#          nacos:
+#            server-addr: localhost:8848
+#            # 注意，这里的namespace不能为空
+#            namespace: 9b702cea-ca45-416a-b545-e4ac3ddc09bc
+#            group-id: SENTINEL_GROUP
+#            data-id: ${spring.application.name}-flow-rules
+#            data-type: json
+#            rule-type: flow
+#        degrade-rule:
+#          nacos:
+#            server-addr: localhost:8848
+#            # 注意，这里的namespace不能为空
+#            namespace: 9b702cea-ca45-416a-b545-e4ac3ddc09bc
+#            group-id: SENTINEL_GROUP
+#            data-id: ${spring.application.name}-sentinel-degrade
+#            data-type: json
+#            rule-type: degrade
   redis:
     database: 0
     host: 127.0.0.1
